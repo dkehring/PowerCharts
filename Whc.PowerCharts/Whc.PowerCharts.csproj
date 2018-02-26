@@ -2,6 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Dave Kehring</Authors>
+    <Company>White Horse Consulting, Inc.</Company>
+    <Product>Power Charts</Product>
+    <Description>A library for calculating power training zones based on Dr. Andy Coggan's power zones.</Description>
+    <Copyright>2018 White Horse Consulting, Inc.</Copyright>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/dkehring/PowerCharts</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/dkehring/PowerCharts</RepositoryUrl>
   </PropertyGroup>
 
 </Project>
