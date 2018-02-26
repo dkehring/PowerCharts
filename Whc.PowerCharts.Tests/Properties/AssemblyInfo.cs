@@ -3,11 +3,11 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 [assembly: AssemblyTitle("Whc.PowerCharts.Tests")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Test project for Whc.PowerCharts library.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("White Horse Consulting, Inc.")]
 [assembly: AssemblyProduct("Whc.PowerCharts.Tests")]
-[assembly: AssemblyCopyright("Copyright ©  2018")]
+[assembly: AssemblyCopyright("Copyright © 2018 White Horse Consulting, Inc.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
