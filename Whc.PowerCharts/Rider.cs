@@ -6,8 +6,15 @@ namespace Whc.PowerCharts
     {
         public string Name { get; set; }
         public int AgeYears { get; set; }
-        public double WeightPounds { get; set; }
-        public double WeightKgs => Math.Round(WeightPounds / 2.2, 2);
+
+        public double WeightPounds
+        {
+            get { return Math.Round(WeightKgs * 2.2); }
+            set { WeightKgs = Math.Round(value / 2.2); }
+        }
+
+        public double WeightKgs { get; set; }
+
         public int RestingHeartRateBpm { get; set; }
         public int FunctionalThresholdPowerWatts { get; set; }
         public double WattsPerKilogram

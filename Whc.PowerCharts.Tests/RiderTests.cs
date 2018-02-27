@@ -12,6 +12,13 @@ namespace Whc.PowerCharts.Tests
         }
 
         [Fact]
+        public void WeightPoundsConversion()
+        {
+            var rider = new Rider { WeightKgs = 100 };
+            Assert.Equal(220.0, rider.WeightPounds);
+        }
+
+        [Fact]
         public void WattsPerKg_Zero_IfNoWeight()
         {
             var rider = new Rider { WeightPounds = 0 };
@@ -19,7 +26,14 @@ namespace Whc.PowerCharts.Tests
         }
 
         [Fact]
-        public void WattsPerKg()
+        public void WattsPerKg_SetByKg()
+        {
+            var rider = new Rider { WeightKgs = 100, FunctionalThresholdPowerWatts = 300 };
+            Assert.Equal(3.0, rider.WattsPerKilogram);
+        }
+
+        [Fact]
+        public void WattsPerKg_SetByPounds()
         {
             var rider = new Rider { WeightPounds = 220, FunctionalThresholdPowerWatts = 300 };
             Assert.Equal(3.0, rider.WattsPerKilogram);
