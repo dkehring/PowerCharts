@@ -67,6 +67,7 @@
     <Compile Include="PowerZoneTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RiderTests.cs" />
+    <Compile Include="TanakaMaxHeartRateTests.cs" />
     <Compile Include="UtilitiesTests.cs" />
   </ItemGroup>
   <ItemGroup>

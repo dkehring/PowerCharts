@@ -18,5 +18,17 @@ namespace Whc.PowerCharts
             }
         }
 
+        public PowerChart(Rider rider, 
+            IMaxHeartRateStrategy maxHrStrategy,
+            IEnumerable<PowerZoneDefinition> zoneDefinitions)
+        {
+            Rider = rider;
+            Zones = new List<PowerZone>();
+            foreach (var powerZoneDef in zoneDefinitions.OrderBy(x => x.Zone))
+            {
+                Zones.Add(new PowerZone(rider, maxHrStrategy, powerZoneDef));
+            }
+        }
+
     }
 }

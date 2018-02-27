@@ -12,5 +12,13 @@
             if (targetPercent.HasValue == false) return new double?();
             return ((AgePredictedMaxHeartRate(age) - restingHeartRate) * targetPercent) + restingHeartRate;
         }
+
+        public static double? CalculateHeartRate(IMaxHeartRateStrategy maxHrStrategy, 
+            Rider rider,
+            double? targetPercent)
+        {
+            if (targetPercent.HasValue == false) return new double?();
+            return ((maxHrStrategy.Calculate(rider) - rider.RestingHeartRateBpm) * targetPercent) + rider.RestingHeartRateBpm;
+        }
     }
 }
