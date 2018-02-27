@@ -58,5 +58,21 @@ namespace Whc.PowerCharts.Tests
             var powerZone = new PowerZone(TestRider(), TestZone());
             Assert.Equal(180, powerZone.WattsLow);
         }
+
+        [Fact]
+        public void HeartRateHigh_InjectHrStrategy()
+        {
+            var hrStrategy = new TanakaMaxHeartRate();
+            var powerZone = new PowerZone(TestRider(), hrStrategy, TestZone());
+            Assert.Equal(113, powerZone.HeartRateHigh);
+        }
+
+        [Fact]
+        public void HeartRateLow_InjectHrStrategy()
+        {
+            var hrStrategy = new TanakaMaxHeartRate();
+            var powerZone = new PowerZone(TestRider(), hrStrategy, TestZone());
+            Assert.Equal(101, powerZone.HeartRateLow);
+        }
     }
 }

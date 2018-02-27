@@ -16,5 +16,16 @@
             HeartRateLow = Utilities.CalculateHeartRate(rider.AgeYears, Definition.HeartRateLowPercent, rider.RestingHeartRateBpm);
             HeartRateHigh = Utilities.CalculateHeartRate(rider.AgeYears, Definition.HeartRateHighPercent, rider.RestingHeartRateBpm);
         }
+
+        public PowerZone(Rider rider, 
+            IMaxHeartRateStrategy maxHrStrategy, 
+            PowerZoneDefinition zoneDefinition)
+        {
+            Definition = zoneDefinition;
+            WattsLow = Definition.WattsLowPercent * rider.FunctionalThresholdPowerWatts;
+            WattsHigh = Definition.WattsHighPercent * rider.FunctionalThresholdPowerWatts;
+            HeartRateLow = Utilities.CalculateHeartRate(maxHrStrategy, rider, Definition.HeartRateLowPercent);
+            HeartRateHigh = Utilities.CalculateHeartRate(maxHrStrategy, rider, Definition.HeartRateHighPercent);
+        }
     }
 }
