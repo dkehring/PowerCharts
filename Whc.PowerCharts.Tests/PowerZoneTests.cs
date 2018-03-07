@@ -60,6 +60,13 @@ namespace Whc.PowerCharts.Tests
         }
 
         [Fact]
+        public void WattsMiddle()
+        {
+            var powerZone = new PowerZone(TestRider(), TestZone());
+            Assert.Equal((powerZone.WattsLow + powerZone.WattsHigh)/2.0, powerZone.WattsMiddle);
+        }
+
+        [Fact]
         public void HeartRateHigh_InjectHrStrategy()
         {
             var hrStrategy = new TanakaMaxHeartRate();

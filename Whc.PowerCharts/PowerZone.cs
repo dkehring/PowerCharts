@@ -4,6 +4,7 @@
     {
         public PowerZoneDefinition Definition { get; set; }
         public double WattsLow { get; set; }
+        public double WattsMiddle => (WattsLow + WattsHigh) / 2.0;
         public double WattsHigh { get; set; }
         public double? HeartRateLow { get; set; }
         public double? HeartRateHigh { get; set; }
