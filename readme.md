@@ -22,3 +22,6 @@ There's an alternate constructor for the PowerChart class that let's you pass in
     var chart = new PowerChart(rider, new TanakaMaxHeartRate(), zones);
 
 You can create your own max HR strategy by creating a class that implements the `IMaxHeartRateStrategy` interface.
+
+### License
+[MIT License](license.txt)
