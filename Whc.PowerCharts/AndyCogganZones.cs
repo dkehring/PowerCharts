@@ -30,6 +30,17 @@ namespace Whc.PowerCharts
             });
             Add(new PowerZoneDefinition
             {
+                Zone = 3,
+                Description = "Tempo",
+                WattsLowPercent = .76,
+                WattsHighPercent = .90,
+                HeartRateLowPercent = .84,
+                HeartRateHighPercent = .94,
+                RpeLow = 3,
+                RpeHigh = 4
+            });
+            Add(new PowerZoneDefinition
+            {
                 Zone = 4,
                 Description = "Lactate Threshold",
                 WattsLowPercent = .91,
@@ -54,7 +65,7 @@ namespace Whc.PowerCharts
                 Zone = 6,
                 Description = "Anaerobic Capacity",
                 WattsLowPercent = 1.21,
-                WattsHighPercent = 0,
+                WattsHighPercent = 1.5,
                 RpeLow = 7,
                 RpeHigh = 0
             });
